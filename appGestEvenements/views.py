@@ -25,7 +25,7 @@ def inscription(request, even_id):
                     # sending email to participant by email adress
                     sending_email(recip_email=form.data["email"],
                                   evenement=evenement,
-                                  message=f"Merci pour votre inscription {form.data["name"]}."
+                                  message=f"Merci pour votre inscription {form.data['name']}."
                                           f" Ceci:  {code_id}  est votre code d'accès."
                                           f" Veuillez l'enregistrer, ce dernier vous permettra de noter l'événement")
                     # end sending
@@ -33,7 +33,7 @@ def inscription(request, even_id):
                     return render(request, 'appGestEvenements/success-full-inscription.html',
                                   context={"code_insc": code_id, "even": evenement})
                 else:
-                    context = {"form": form, "errors": f"l'adresse *{form.data["email"]}* "
+                    context = {"form": form, "errors": f"l'adresse *{form.data['email']}* "
                                                        f"existe déjà dans la liste des participants",
                                'even': evenement}
                     return render(request, "appGestEvenements/inscription-form.html", context=context)
