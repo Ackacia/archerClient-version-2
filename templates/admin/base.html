@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %} {% block extrahead %}{{ block.super }}
+
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'assets/larcher_logo.png' %}" >
+
+<style>
+  :root {
+    --primary: #32394F;
+    --secondary: #32394F;
+    --accent: #FFFF;
+    --primary-fg: #fff;
+    --header-color: #ccffe8;
+  }
+</style>
+{% endblock %}
